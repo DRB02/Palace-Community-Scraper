@@ -27,7 +27,7 @@ def main():
         embed.add_embed_field(name='Item:', value='**'+item+'**')
         embed.set_footer(text='Palace Droplist | Developed by DRB02#0001')
         webhook.add_embed(embed)
-        time.sleep(1)
+        time.sleep(0.5)
         webhook.execute()
         print("| WEBHOOK SENT |")
     else:
