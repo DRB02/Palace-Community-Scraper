@@ -1,8 +1,23 @@
-import requests
-from bs4 import BeautifulSoup
-from discord_webhook import DiscordWebhook, DiscordEmbed
-import random
-import time
+def install_dependecies():
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'requests'])
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'bs4'])
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'discord_webhook'])
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'random'])
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'time'])
+
+try:
+    import requests
+    from bs4 import BeautifulSoup
+    from discord_webhook import DiscordWebhook, DiscordEmbed
+    import random
+    import time
+except:
+    install_dependecies()
+    import requests
+    from bs4 import BeautifulSoup
+    from discord_webhook import DiscordWebhook, DiscordEmbed
+    import random
+    import time
 
 #unquote which one you need
 #WebhookUrl = 'webhook1'
